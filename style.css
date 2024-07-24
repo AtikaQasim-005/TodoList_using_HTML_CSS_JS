@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 165, 0.7875525210084033) 100%
+  );
+}
+.Todo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 30vw;
+  padding: 30px 20px;
+}
+.addTask {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+.addTask h2{
+  font-size: clamp(1rem, 2.5vw, 2rem); 
+}
+.addTask button {
+  padding: 10px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  margin-top: 5px;
+  margin-left: 10px;
+  background-color:#3f5efb;
+  color: white;
+  letter-spacing: 1px;
+  transition: transform ease-in;
+}
+.addTask button:active{
+  transform:scale(0.9);
+}
+.addTask button:focus{
+    outline: none;
+}
+
+.addTask button:hover {
+  background-color: #0425cb;
+}
+.addTask input {
+  padding: 7px;
+  margin-top: 10px;
+  max-width: 75%;
+  /* font-size: 15px; */
+  font-size: clamp(1rem, 2.5vw, 1.255rem);
+  color: black;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+.addTask input:focus{
+    outline-color: #3f5efb;
+
+}
+.List {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+.List h2{
+  font-size: clamp(1rem, 2.5vw, 2rem); 
+}
+ul > li {
+  list-style: none;
+  padding: 5px 5px;
+  border-bottom: 1px solid #3f5efb;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* font-size: 15px; */
+  font-size: clamp(1rem, 2.5vw, 1.255rem);
+  font-weight: 600;
+  cursor: pointer;
+} 
+
+li>button{
+  border: none;
+  padding: 5px 10px;
+  transition: transform ease-in;
+  border-radius: 5px;
+  fill: #3f5efb;
+  cursor: pointer;
+}
+li>button:focus{
+  outline: none;
+}
+
+li>button:active{
+  transform:scale(0.9);
+}
+li>button:hover{
+  background-color: #0425cb;
+  fill: white;
+}
+.completed {
+  text-decoration: line-through;
+}
